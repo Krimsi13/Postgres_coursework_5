@@ -16,7 +16,7 @@ class DBManager:
 
         cur = conn.cursor()
 
-        cur.execute(f'DROP DATABASE {database_name}')
+        cur.execute(f'DROP DATABASE IF EXISTS {database_name}')
         cur.execute(f'CREATE DATABASE {database_name}')
 
         conn.close()
